@@ -10,10 +10,8 @@ Just a simple web music player created using React + Spotify API. You can search
 
 
 # Installation:
-
 ## Open now by link:
 You can see the page right now:  https://anapiyani.github.io/SpotifyUp/
-
 ## Install and Open in localhost
 1. Clone the zip file.
 2. Unzip the zip file
