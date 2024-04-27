@@ -1,4 +1,4 @@
-import React from "react";
+ 
 import './Error.scss';
 import { Link } from "react-router-dom";
 import Button from '@mui/material/Button';

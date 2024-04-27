@@ -1,4 +1,3 @@
-import React from "react";
 import './homeContainer.scss';
 import Home from "../../components/home/home";
 

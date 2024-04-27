@@ -1,4 +1,3 @@
-import React from "react";
 import './dashContainer.scss';
 import DashBoard from "../../components/dashboard/dashboard";
 

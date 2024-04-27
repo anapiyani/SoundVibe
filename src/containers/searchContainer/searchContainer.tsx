@@ -1,4 +1,4 @@
-import React, {useState, useCallback} from "react";
+import {useState, useCallback} from "react";
 import Search from "../../components/search/search";
 import './searchContainer.scss';
 import Alert from '@mui/material/Alert';

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import {useState} from "react";
 import './menuBar.scss';
 import Button from '@mui/material/Button';
 import SearchIcon from '@mui/icons-material/Search';

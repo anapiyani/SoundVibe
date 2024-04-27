@@ -1,6 +1,5 @@
-import React, {useState} from "react";
+import {useState} from "react";
 import './dashboard.scss';
-import LoopIcon from '@mui/icons-material/Loop';
 import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import PauseIcon from '@mui/icons-material/Pause';
@@ -23,8 +22,6 @@ type TProps = {
 }
 
 const DashBoard = (props: TProps) => {
-    const [isRepeat, setIsRepeat] = useState(false);
-
     const handleMusic = () => {
         if (props.isPlaying) {
             props.HandlePause();

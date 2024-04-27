@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import Button from '@mui/material/Button';
 import InfoIcon from '@mui/icons-material/Info';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
