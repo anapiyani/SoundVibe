@@ -1,0 +1,70 @@
+@import '../../scss/mixin.scss';
+.controls-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    color: white;
+    width: 100%;
+    bottom: 0;
+    background-color: #020c1f;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @include media-md {
+
+    }
+    .controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        button {
+            border: none;
+            background-color: transparent;
+
+            &:last-child {
+                margin-right: 0px;
+            }
+        }
+        .next {
+            margin-right: 200px;
+            @include media-md {
+                margin-right: 50px;
+            }
+        }
+        .prev {
+            margin-left: 200px;
+            @include media-md {
+                margin-left: 50px;
+            }
+        }
+        .repeat {
+            margin-left: 40px;
+            @include media-md {
+                display: none;
+            }
+        }
+    }
+}
+
+.progress_bar {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    margin: 0;
+    margin-bottom: 20px;
+}
+.progress {
+    // width: 1px;
+    height: 3px;
+    background: #529821;
+    transition: width .1s linear;
+    margin: 0;
+}
+p {
+    color: white;
+    font-family: 'Arial', sans-serif;
+}

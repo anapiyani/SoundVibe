@@ -1,0 +1,31 @@
+.home {
+    width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+    .content {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+        .texts {
+            text-align: center;
+            color: rgb(255, 255, 255);
+        }
+    }
+}
+.greeting {
+    font-size: 42px;
+}
+.about {
+    font-size: 28px;
+}
+.spotify {
+    color: #36B778;
+}
+.react {
+    color: #1876D2;
+}
+.goon {
+    color: rgb(175, 175, 175);
+    font-size: 14px;
+}

@@ -1,0 +1,33 @@
+.errorpage {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #020816;
+    .error {
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-self: center;
+        text-align: center;
+        margin-top: 100px;
+        line-height: 0.4;
+        h1 {
+            color: white;
+            font-size: 42px;
+        }
+        .code {
+            color: rgb(154, 0, 0);
+        }
+        h3 {
+            font-size: 36px;
+            color: rgb(157, 157, 157);
+        }
+    }
+}
+
+.linkHome {
+    color: #1876D2;
+    text-decoration: none;
+}

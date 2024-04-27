@@ -1,0 +1,12 @@
+.searchContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    background-color: hsl(222, 83%, 5%);
+    .searchContent {
+        margin: 0;
+        display: flex;
+        width: 100%;
+    }
+}

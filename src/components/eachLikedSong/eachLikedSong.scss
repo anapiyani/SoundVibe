@@ -1,0 +1,42 @@
+.track {
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #040E21;
+    padding: 10px;
+    width: 70%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .names {
+        display: flex;
+        .picture {
+            img {
+                width: 50px;
+                height: 50px;
+                border-radius: 5px;
+            }
+        }
+        .names_track {
+            padding: 0;
+            display: flex;
+            color: white;
+            flex-direction: column;
+            margin: 0;
+            margin-left: 20px;
+            p {
+                margin: 0;
+            }
+            .name_auth {
+                font-size: 15px;
+                color: rgb(187, 185, 185);
+            }
+        }
+    }
+    .playButton {
+        Button {
+            width: 40px;
+            margin-right: 10px;
+        }
+    }
+}

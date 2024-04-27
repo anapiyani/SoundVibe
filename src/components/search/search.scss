@@ -1,0 +1,140 @@
+@import '../../scss/mixin.scss';
+.search {
+    width: 100%;
+    margin: 30px;
+    .searchContent {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        .searchForm {
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .searchInput {
+                margin-right: 30px;
+                color: white;
+                border-color: white;
+                width: 300px;
+                @include media-md {
+                    width: 200px;
+                }
+                &::before {
+                    border-bottom: 1px solid white;
+                }
+                &::placeholder {
+                    color: white;
+                }
+            }
+        } 
+        .completedArea {
+            width: 100%;
+            height: 85vh;
+            overflow:scroll;
+            margin-top: 30px;
+            .musics {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .track {
+                    margin-top: 10px;
+                    cursor: pointer;
+                    background-color: #040E21;
+                    padding: 10px;
+                    width: 70%;
+                    height: 60px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .names {
+                        display: flex;
+                        @include media-md {
+                            font-size: 12px;
+                        }
+                        .picture {
+                            @include media-md {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+                            img {
+                                width: 50px;
+                                height: 50px;
+                                border-radius: 5px;
+                                @include media-md {
+                                    width: 30px;
+                                    height: 30px;
+                                }
+                            }
+                        }
+                        .names_track {
+                            padding: 0;
+                            display: flex;
+                            color: white;
+                            flex-direction: column;
+                            margin: 0;
+                            margin-left: 20px;
+                            @include media-md {
+                                font-size: 13px;
+                            }
+                            p {
+                                margin: 0;
+                                @include media-md {
+                                    font-size: 13px;
+                                }
+                            }
+                            .name_auth {
+                                font-size: 15px;
+                                @include media-md {
+                                    font-size: 10px;
+                                }
+                                color: rgb(187, 185, 185);
+                            }
+                        }
+                    }
+                    .playButton {
+                        Button {
+                            width: 40px;
+                            margin-right: 10px;
+                            @include media-md {
+                                width: 10px;
+                                margin: 0;
+                                padding: 0;
+                            }
+                        }
+                        .playBtnIns {
+                            @include media-md {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.noSongs {
+    color: white;
+}
+.searchAlert {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400;
+    background-color: rgb(90, 90, 90);
+    border: 2px solid #000;
+    box-shadow: 24;
+    padding: 30px;
+    color: white;
+    border-radius: 12px;
+}

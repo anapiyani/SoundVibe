@@ -1,0 +1,59 @@
+@import '../../scss/mixin.scss';
+.likedSongs {
+    width: 100%;
+    @include media-xl {
+        width: 750px;
+    }
+    @include media-md {
+        width: 100%;
+    }
+    .header {
+        width: 100%;
+        padding: 30px;
+        display: flex;
+        justify-content: center;
+        color: white;
+        @include media-md {
+            width: 100%;
+            padding: 0;
+        }
+        h1 {
+            width: 240px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @include media-md {
+                font-size: 19px;
+                width: 100%;
+            }
+        }
+        .icon {
+            font-size: 44px;
+            @include media-md {
+                font-size: 19px;
+            }
+        }
+    }
+}
+.completedArea {
+    width: 100%;
+    min-height: 350px;
+    max-height: 500px;
+    overflow: scroll;
+    margin-top: 30px;
+    .musics {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.noLike {
+    font-size: 36px;
+    color: rgb(190, 190, 190);
+    @include media-md {
+        font-size: 16px;
+        width: 100%;
+    }
+}
