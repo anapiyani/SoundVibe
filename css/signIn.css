@@ -1,0 +1,28 @@
+.login {
+  width: 100%;
+  height: 100vh;
+  background-color: hsl(222, 83%, 5%);
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+.login .login_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 100px;
+}
+.login .login_container .texts h1 {
+  font-size: 44px;
+}
+.login .login_container .texts h3 {
+  font-size: 38px;
+}
+.login .login_container .texts .spotify {
+  color: rgb(0, 224, 0);
+}
+.login .login_container .texts p {
+  font-size: 13px;
+  color: rgb(202, 202, 202);
+}/*# sourceMappingURL=signIn.css.map */

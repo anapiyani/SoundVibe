@@ -1,0 +1,154 @@
+.search {
+  width: 100%;
+  margin: 30px;
+}
+.search .searchContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.search .searchContent .searchForm {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search .searchContent .searchForm .searchInput {
+  margin-right: 30px;
+  color: white;
+  border-color: white;
+  width: 300px;
+}
+@media (max-width: 1000px) and (min-width: 501px) {
+  .search .searchContent .searchForm .searchInput {
+    width: 200px;
+  }
+}
+.search .searchContent .searchForm .searchInput::before {
+  border-bottom: 1px solid white;
+}
+.search .searchContent .searchForm .searchInput::placeholder {
+  color: white;
+}
+.search .searchContent .completedArea {
+  width: 100%;
+  height: 85vh;
+  overflow: scroll;
+  margin-top: 30px;
+}
+.search .searchContent .completedArea .musics {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.search .searchContent .completedArea .musics .track {
+  margin-top: 10px;
+  cursor: pointer;
+  background-color: #040E21;
+  padding: 10px;
+  width: 70%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.search .searchContent .completedArea .musics .track .names {
+  display: flex;
+}
+@media (max-width: 1000px) and (min-width: 501px) {
+  .search .searchContent .completedArea .musics .track .names {
+    font-size: 12px;
+  }
+}
+@media (max-width: 1000px) and (min-width: 501px) {
+  .search .searchContent .completedArea .musics .track .names .picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.search .searchContent .completedArea .musics .track .names .picture img {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+@media (max-width: 1000px) and (min-width: 501px) {
+  .search .searchContent .completedArea .musics .track .names .picture img {
+    width: 30px;
+    height: 30px;
+  }
+}
+.search .searchContent .completedArea .musics .track .names .names_track {
+  padding: 0;
+  display: flex;
+  color: white;
+  flex-direction: column;
+  margin: 0;
+  margin-left: 20px;
+}
+@media (max-width: 1000px) and (min-width: 501px) {
+  .search .searchContent .completedArea .musics .track .names .names_track {
+    font-size: 13px;
+  }
+}
+.search .searchContent .completedArea .musics .track .names .names_track p {
+  margin: 0;
+}
+@media (max-width: 1000px) and (min-width: 501px) {
+  .search .searchContent .completedArea .musics .track .names .names_track p {
+    font-size: 13px;
+  }
+}
+.search .searchContent .completedArea .musics .track .names .names_track .name_auth {
+  font-size: 15px;
+  color: rgb(187, 185, 185);
+}
+@media (max-width: 1000px) and (min-width: 501px) {
+  .search .searchContent .completedArea .musics .track .names .names_track .name_auth {
+    font-size: 10px;
+  }
+}
+.search .searchContent .completedArea .musics .track .playButton Button {
+  width: 40px;
+  margin-right: 10px;
+}
+@media (max-width: 1000px) and (min-width: 501px) {
+  .search .searchContent .completedArea .musics .track .playButton Button {
+    width: 10px;
+    margin: 0;
+    padding: 0;
+  }
+}
+@media (max-width: 1000px) and (min-width: 501px) {
+  .search .searchContent .completedArea .musics .track .playButton .playBtnIns {
+    display: none;
+  }
+}
+
+.noSongs {
+  color: white;
+}
+
+.searchAlert {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400;
+  background-color: rgb(90, 90, 90);
+  border: 2px solid #000;
+  box-shadow: 24;
+  padding: 30px;
+  color: white;
+  border-radius: 12px;
+}/*# sourceMappingURL=search.css.map */

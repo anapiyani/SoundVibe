@@ -1,0 +1,72 @@
+.controls-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  color: white;
+  width: 100%;
+  bottom: 0;
+  background-color: #020c1f;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.controls-wrapper .controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.controls-wrapper .controls button {
+  border: none;
+  background-color: transparent;
+}
+.controls-wrapper .controls button:last-child {
+  margin-right: 0px;
+}
+.controls-wrapper .controls .next {
+  margin-right: 200px;
+}
+@media (max-width: 1000px) and (min-width: 501px) {
+  .controls-wrapper .controls .next {
+    margin-right: 50px;
+  }
+}
+.controls-wrapper .controls .prev {
+  margin-left: 200px;
+}
+@media (max-width: 1000px) and (min-width: 501px) {
+  .controls-wrapper .controls .prev {
+    margin-left: 50px;
+  }
+}
+.controls-wrapper .controls .repeat {
+  margin-left: 40px;
+}
+@media (max-width: 1000px) and (min-width: 501px) {
+  .controls-wrapper .controls .repeat {
+    display: none;
+  }
+}
+
+.progress_bar {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.progress {
+  height: 3px;
+  background: #529821;
+  transition: width 0.1s linear;
+  margin: 0;
+}
+
+p {
+  color: white;
+  font-family: "Arial", sans-serif;
+}/*# sourceMappingURL=dashboard.css.map */

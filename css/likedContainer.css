@@ -1,0 +1,12 @@
+.likedContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  background-color: hsl(222, 83%, 5%);
+}
+.likedContainer .likedContent {
+  margin: 0;
+  display: flex;
+  width: 100%;
+}/*# sourceMappingURL=likedContainer.css.map */
