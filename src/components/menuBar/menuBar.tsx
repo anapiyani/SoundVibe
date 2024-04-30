@@ -36,16 +36,20 @@ const MenuBar = (props: TProps) => {
                         <Link to="/search" className="linkTo"><Button variant="outlined" className={buttonClass} startIcon={<SearchIcon />}>{visible ? 'Search' : 'S'}</Button></Link>
                         <Link to="/likedSongs" className="linkTo"><Button variant="outlined" className={buttonClass} startIcon={<FavoriteBorderIcon />}>{visible ? 'Liked songs' : 'L'}</Button></Link>
                     </div>
-                    <div className="nowListening">
-                        <p className="nowPlaying">Now playing</p>
-                        <div className="picture_playing">
-                            <img src={props.nowPlaying?.picture} alt="" />
-                        </div>
-                        <div className="texts">
-                            <p>{props.nowPlaying?.name}</p>
-                            <p>{props.nowPlaying?.authorName}</p>
-                        </div>
-                    </div>
+                    {
+                        props.nowPlaying ? 
+                            <div className="nowListening">
+                                <p className="nowPlaying">Now playing</p>
+                                <div className="picture_playing">
+                                    <img src={props.nowPlaying?.picture} alt="" />
+                                </div>
+                                <div className="texts_menu">
+                                    <p>{props.nowPlaying?.name}</p>
+                                    <p>{props.nowPlaying?.authorName}</p>
+                                </div>
+                            </div> :
+                            <p className="notPlaying">Enjoy your music journey!</p>
+                    }
                 </div>
             </div>
         </div>
