@@ -22,3 +22,11 @@ export type TSongs = {
     uri: string;
     explicit: boolean;
 }
+
+
+export type TLiked = {
+    name: string,
+    picture: string,
+    authorName: string,
+    preview: string | null,
+}

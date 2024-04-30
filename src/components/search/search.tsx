@@ -13,6 +13,7 @@ type TProps = {
     songs: TSongs[];
     isSpinning: boolean;
     LikedSongs: (name: string, authorName: string, picture: string, previewSong: string) => void; 
+    deleteLikedSong: (preview: string) => void;
 }
 
 const Search = (props: TProps) => {
@@ -45,7 +46,7 @@ const Search = (props: TProps) => {
                             props.songs.length > 0 
                             ?
                             props.songs.map((item, index) => (
-                                <EachSearchSong key={index} picture={item.album.images[0].url} authorName={item.artists[0].name} name={item.name} preview={item.preview_url} LikedSongs={props.LikedSongs} uri={item.uri} explicit={item.explicit} album={item.album.name} total={item.album.total_tracks} release_date={item.album.release_date} />
+                                <EachSearchSong key={index} picture={item.album.images[0].url} authorName={item.artists[0].name} name={item.name} preview={item.preview_url} LikedSongs={props.LikedSongs} uri={item.uri} explicit={item.explicit} album={item.album.name} total={item.album.total_tracks} release_date={item.album.release_date} deleteLikedSong={props.deleteLikedSong} />
                             ))
                             :
                             <div className="noSongs">

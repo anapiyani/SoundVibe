@@ -6,7 +6,8 @@ import {searchSongs} from '../../SpotifyApi';
 import { TSongs } from "../../components/types/types";
 
 type TProps = {
-    SongLiked: (name: string, authorName: string, picture: string, previewSong: string | null) => void
+    SongLiked: (name: string, authorName: string, picture: string, previewSong: string | null) => void;
+    deleteLikedSong: (preview: string) => void;
 }
 
 const SearchContainer = (props: TProps) => {
@@ -37,7 +38,7 @@ const SearchContainer = (props: TProps) => {
         <div className="searchContainer">
             <div className="searchContent">
                 {catchErr ?  <Alert variant="filled" severity="error">Something went wrong</Alert> : ''}
-                <Search searchHandler={searchHandler} songs={songs} isSpinning={spinner} LikedSongs={SongLiked}/>
+                <Search deleteLikedSong={props.deleteLikedSong} searchHandler={searchHandler} songs={songs} isSpinning={spinner} LikedSongs={SongLiked}/>
             </div>
         </div>
     )

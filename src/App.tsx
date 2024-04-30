@@ -7,13 +7,8 @@ import SearchContainer from './containers/searchContainer/searchContainer';
 import ErrorPage from './components/Error/Error';
 import LikedContainer from './containers/likedSongs/likedContainer';
 import DashContainer from './containers/DashContainer/dashContainer';
+import type { TLiked } from './components/types/types';
 
-type TLiked = {
-  name: string,
-  picture: string,
-  authorName: string,
-  preview: string | null,
-}
 
 function App() {
   const [liked, setLiked] = useState<TLiked[]>(() => {
@@ -26,7 +21,7 @@ function App() {
   const [duration, setDuration] = useState<number>(0); 
   const [progress, setProgress] = useState<number>(0);
   const [currentSongIndex, setCurrentSongIndex] = useState<number>(0); 
-
+  const [currentInfo, setCurrentInfo] = useState<TLiked | undefined>();
 
   useEffect(() => {
     if (audioRef.current) {
@@ -44,6 +39,7 @@ function App() {
   useEffect(() => {
     localStorage.setItem('likedSongs', JSON.stringify(liked));
   }, [liked]);
+
 
   const updateTime = () => {
     if (audioRef.current) {
@@ -68,16 +64,21 @@ function App() {
       audioRef.current.src = previewUrl; 
       audioRef.current.play(); 
       setIsPlaying(true); 
+
+      const copyState = liked.slice(); 
+      const infoCurrent: TLiked | undefined = copyState.find(item => item.preview === previewUrl); 
+      infoCurrent ? setCurrentInfo(infoCurrent) : ''
+      // console.log(currentInfo);
     }
   }
 
   const deleteLiked = (previewUrl: string | null) => {
     const copyState = liked.slice(); 
     const index = copyState.findIndex(item => item.preview === previewUrl); 
-    if (index !== -1) {
-        copyState.splice(index, 1);
-        setLiked(copyState);
-    }
+      if (index !== -1) {
+          copyState.splice(index, 1);
+          setLiked(copyState);
+      }
     }
 
   const pauseMusic = () => {
@@ -114,10 +115,10 @@ function App() {
   return (
     <div className="app">
       <Router>
-        <MenuBar />
+        <MenuBar nowPlaying={currentInfo} />
           <Routes>
             <Route path="/" element={<HomeContainer />} />
-            <Route path="/search" element={<SearchContainer SongLiked={SongLiked} />} />
+            <Route path="/search" element={<SearchContainer deleteLikedSong={deleteLiked} SongLiked={SongLiked} />} />
             <Route path="/likedSongs" element={<LikedContainer nextSong={handlePause} onPause={handlePause} deleteLiked={deleteLiked} liked={liked} playMusic={playMusic} isPlaying={isPlaying} />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>

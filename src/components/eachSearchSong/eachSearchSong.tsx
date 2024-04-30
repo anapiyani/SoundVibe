@@ -18,6 +18,7 @@ type TProps = {
     total: number;
     release_date: string;
     LikedSongs: (name: string, authorName: string, picture: string, previewSong: string) => void; 
+    deleteLikedSong: (preview: string) => void;
 }
 
 const EachSearchSong = (props: TProps) => {
@@ -72,7 +73,7 @@ const EachSearchSong = (props: TProps) => {
                     <InfoIcon className="infoIcon" />
                 </Button>
                 {
-                     saved ? <Button className="buttonSave"><FavoriteIcon className="favIcon" color="secondary"/></Button> : <Button onClick={() => sendLikedSong(props.name, props.authorName, props.picture, props.preview)}><FavoriteBorderIcon className="favIcon" /></Button>
+                     saved ? <Button className="buttonSave" onClick={() => props.deleteLikedSong(props.preview)}><FavoriteIcon className="favIcon" color="secondary"/></Button> : <Button onClick={() => sendLikedSong(props.name, props.authorName, props.picture, props.preview)}><FavoriteBorderIcon className="favIcon" /></Button>
                 }
             </div>
         </div> 

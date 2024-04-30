@@ -1,5 +1,6 @@
 import './dashContainer.scss';
 import DashBoard from "../../components/dashboard/dashboard";
+import { TLiked } from '../../components/types/types';
 
 type Tduration = {
     duration: string;

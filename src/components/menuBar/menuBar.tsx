@@ -7,8 +7,13 @@ import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import EmojiPeopleIcon from '@mui/icons-material/EmojiPeople';
 import { Link } from "react-router-dom";
+import { TLiked } from "../types/types";
 
-const MenuBar = () => {
+type TProps = {
+    nowPlaying: TLiked | undefined;
+}
+
+const MenuBar = (props: TProps) => {
     const [visible, setVisible] = useState<boolean>(false);
 
     const buttonClass = visible ? 'visibleOn' : 'visibleOff';
@@ -32,7 +37,14 @@ const MenuBar = () => {
                         <Link to="/likedSongs" className="linkTo"><Button variant="outlined" className={buttonClass} startIcon={<FavoriteBorderIcon />}>{visible ? 'Liked songs' : 'L'}</Button></Link>
                     </div>
                     <div className="nowListening">
-                        <p>There will be appear listening songs...</p>
+                        <p className="nowPlaying">Now playing</p>
+                        <div className="picture_playing">
+                            <img src={props.nowPlaying?.picture} alt="" />
+                        </div>
+                        <div className="texts">
+                            <p>{props.nowPlaying?.name}</p>
+                            <p>{props.nowPlaying?.authorName}</p>
+                        </div>
                     </div>
                 </div>
             </div>
