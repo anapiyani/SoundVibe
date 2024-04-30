@@ -57,7 +57,7 @@
                 font-size: 13px;
             }
             @include media-sm {
-                font-size: 8px;
+                font-size: 13px;
             }
             p {
                 margin: 0;
@@ -65,7 +65,7 @@
                     font-size: 13px;
                 }
                 @include media-sm {
-                    font-size: 8px;
+                    font-size: 13px;
                 }
             }
             .name_auth {
@@ -74,7 +74,7 @@
                     font-size: 10px;
                 }
                 @include media-sm {
-                    font-size: 8px;
+                    font-size: 10px;
                 }
                 color: rgb(187, 185, 185);
             }
