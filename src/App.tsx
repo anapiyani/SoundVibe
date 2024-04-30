@@ -16,13 +16,17 @@ type TLiked = {
 }
 
 function App() {
-  const [liked, setLiked] = useState<TLiked[]>([]);
+  const [liked, setLiked] = useState<TLiked[]>(() => {
+    const savedLikes = localStorage.getItem('likedSongs');
+    return savedLikes ? JSON.parse(savedLikes) : [];
+  });
   const audioRef = useRef<HTMLAudioElement>(null); 
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [currentTime, setCurrentTime] = useState<number>(0); 
   const [duration, setDuration] = useState<number>(0); 
   const [progress, setProgress] = useState<number>(0);
   const [currentSongIndex, setCurrentSongIndex] = useState<number>(0); 
+
 
   useEffect(() => {
     if (audioRef.current) {
@@ -36,6 +40,10 @@ function App() {
       }
     };
   }, []);
+
+  useEffect(() => {
+    localStorage.setItem('likedSongs', JSON.stringify(liked));
+  }, [liked]);
 
   const updateTime = () => {
     if (audioRef.current) {
