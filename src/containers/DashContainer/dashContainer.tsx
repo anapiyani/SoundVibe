@@ -19,11 +19,9 @@ const DashContainer = (props: TProps) => {
     const handlePause = () => {
         props.handlePause(); 
     }
-
     const handlePlay = () => { 
         props.handlePlay(); 
     }
-
     const handleNext = () => {
         props.handleNext(); 
     }
