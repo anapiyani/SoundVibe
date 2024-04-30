@@ -110,7 +110,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomeContainer />} />
             <Route path="/search" element={<SearchContainer SongLiked={SongLiked} />} />
-            <Route path="/likedSongs" element={<LikedContainer deleteLiked={deleteLiked} liked={liked} playMusic={playMusic} isPlaying={isPlaying} />} />
+            <Route path="/likedSongs" element={<LikedContainer onPause={handlePause} deleteLiked={deleteLiked} liked={liked} playMusic={playMusic} isPlaying={isPlaying} />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
           <DashContainer 

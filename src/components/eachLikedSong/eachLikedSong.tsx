@@ -13,6 +13,7 @@ type TProps = {
     onPlay: () => void;
     isPlaying: boolean;
     deleteLiked: () => void;
+    onPause: () => void;
 }
 
 const EachLikedSong = (props: TProps) => {
@@ -28,7 +29,7 @@ const EachLikedSong = (props: TProps) => {
                 </div>
             </div>
             <div className="playButton">
-                <Button onClick={props.onPlay}>{props.isPlaying ? <PauseCircleOutlineIcon /> : <PlayCircleOutlineIcon />}</Button> 
+                {props.isPlaying ?  <Button onClick={props.onPause}><PauseCircleOutlineIcon /></Button> : <Button onClick={props.onPlay}> <PlayCircleOutlineIcon /> </Button>}
                 <Button onClick={props.deleteLiked}><FavoriteIcon color="secondary"/></Button>
             </div>
         </div>   

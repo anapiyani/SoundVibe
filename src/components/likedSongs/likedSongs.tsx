@@ -16,6 +16,7 @@ type TProps = {
     playMusic: (previewUrl: string | null) => void;
     isPlaying: boolean;
     deleteLiked: (previewUrl: string | null) => void;
+    onPause: () => void;
 }
 
 const LikedSongs = (props: TProps) => {
@@ -33,7 +34,7 @@ const LikedSongs = (props: TProps) => {
                            {
                             props.liked.length > 0 ?
                             props.liked.map((item, index) => (
-                                <EachLikedSong deleteLiked={() => props.deleteLiked(item.preview)} isPlaying={props.isPlaying} onPlay={() => props.playMusic(item.preview)} key={index} name={item.name} authorName={item.authorName} pictrue={item.picture} preview={item.preview} />
+                                <EachLikedSong onPause={props.onPause} deleteLiked={() => props.deleteLiked(item.preview)} isPlaying={props.isPlaying} onPlay={() => props.playMusic(item.preview)} key={index} name={item.name} authorName={item.authorName} pictrue={item.picture} preview={item.preview} />
                             )) :
                             <div><h2 className="noLike">No liked songs yet...</h2></div>
                            }
