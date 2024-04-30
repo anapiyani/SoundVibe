@@ -11,7 +11,7 @@ const Home = () => {
                 <div className="texts">
                     <h1 className="greeting">Hello & Welcome!</h1>
                     <h3 className="about">Created using <span className="react">REACT</span> + <span className="spotify">SPOTIFY API</span></h3>
-                    <Link to="/search"><Button variant="outlined" endIcon={<HeadsetIcon />}>GET TO SEARCH</Button></Link>
+                    <Link to="/search"><Button variant="outlined" className='button' endIcon={<HeadsetIcon />}>GET TO SEARCH</Button></Link>
                     <p className="goon">Go and search for your favorite songs</p>
                 </div>
             </div>

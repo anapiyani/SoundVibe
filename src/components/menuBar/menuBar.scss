@@ -1,3 +1,4 @@
+@import '../../scss/mixin.scss';
 .menu {
     width: 300px; 
     background-color: #051024;
@@ -19,6 +20,11 @@
     }
 }
 
+.visible {
+    @include media-sm {
+        display: none;
+    }
+}
 .visibleOff {
     width: 40px;
     display: flex;

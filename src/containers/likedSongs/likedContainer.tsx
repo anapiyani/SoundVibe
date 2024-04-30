@@ -16,13 +16,14 @@ type TProps = {
     isPlaying: boolean;
     deleteLiked: (previewUrl: string | null) => void;
     onPause: () => void;
+    nextSong: () => void;
 }
 
 const LikedContainer = (props: TProps) => {
     return (
         <div className="likedContainer">
             <div className="likedContent">
-                <LikedSongs onPause={props.onPause} deleteLiked={props.deleteLiked} isPlaying={props.isPlaying} liked={props.liked} playMusic={props.playMusic}/>
+                <LikedSongs nextSong={props.nextSong} onPause={props.onPause} deleteLiked={props.deleteLiked} isPlaying={props.isPlaying} liked={props.liked} playMusic={props.playMusic}/>
             </div>
         </div>
     )

@@ -2,6 +2,9 @@
 .search {
     width: 100%;
     margin: 30px;
+    @include media-sm {
+        margin: 0;
+    }
     .searchContent {
         width: 100%;
         height: 100%;
@@ -21,11 +24,27 @@
                 @include media-md {
                     width: 200px;
                 }
+                @include media-sm {
+                    width: 120px;
+                    margin-right: 10px;
+                }
+
                 &::before {
                     border-bottom: 1px solid white;
                 }
                 &::placeholder {
                     color: white;
+                }
+            }
+            .searchButton {
+                @include media-sm {
+                    width: 50px;
+                    font-size: 9px;
+                }
+                .iconSearch {
+                    @include media-sm {
+                        display: none;
+                    }
                 }
             }
         } 
@@ -55,6 +74,9 @@
                         @include media-md {
                             font-size: 12px;
                         }
+                        @include media-sm {
+                            font-size: 10px;
+                        }
                         .picture {
                             @include media-md {
                                 display: flex;
@@ -68,6 +90,10 @@
                                 @include media-md {
                                     width: 30px;
                                     height: 30px;
+                                }
+                                @include media-sm {
+                                    width: 20px;
+                                    height: 20px;
                                 }
                             }
                         }
@@ -86,17 +112,30 @@
                                 @include media-md {
                                     font-size: 13px;
                                 }
+                                @include media-sm {
+                                    font-size: 8px;
+                                }
                             }
                             .name_auth {
                                 font-size: 15px;
                                 @include media-md {
                                     font-size: 10px;
                                 }
+                                @include media-sm {
+                                    font-size: 8px;
+                                }
                                 color: rgb(187, 185, 185);
                             }
                         }
                     }
                     .playButton {
+                        @include media-sm {
+                            width: 100px;
+                            display: flex;
+                            padding: 0;
+                            margin: 0;
+                            justify-content: center;
+                        }
                         Button {
                             width: 40px;
                             margin-right: 10px;
@@ -105,10 +144,27 @@
                                 margin: 0;
                                 padding: 0;
                             }
+                            @include media-sm {
+                                width: 10px;
+                            }
+                            
                         }
-                        .playBtnIns {
-                            @include media-md {
-                                display: none;
+                        Button {
+                            @include media-sm {
+                                width: 50px;
+                                margin: 0;
+                            }
+                            .infoIcon {
+                                @include media-sm {
+                                    width: 15px;
+                                    margin: 0;
+                                }
+                            }
+                            .favIcon {
+                                @include media-sm {
+                                    width: 15px;
+                                    margin: 0;
+                                }
                             }
                         }
                     }
@@ -119,6 +175,11 @@
 }
 .noSongs {
     color: white;
+    @include media-sm {
+        font-size: 8px;
+        padding: 10px;
+        text-align: center;
+    }
 }
 .searchAlert {
     display: flex;
@@ -138,3 +199,4 @@
     color: white;
     border-radius: 12px;
 }
+

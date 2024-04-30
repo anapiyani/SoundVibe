@@ -35,7 +35,7 @@ const Search = (props: TProps) => {
             <div className="searchContent">
                 <div className="searchForm">
                       <Input className="searchInput" onChange={(e) => setName(e.target.value)} placeholder="Music name..."/>
-                      <Button className="searchButton" onClick={handleSearch} variant="outlined" startIcon={<SearchIcon />}>Search</Button>
+                      <Button className="searchButton" onClick={handleSearch} variant="outlined" startIcon={<SearchIcon className="iconSearch" />}>Search</Button>
                 </div>
                 {SearchAlert ? <Alert variant="outlined" severity="error" className="searchAlert">You should fill out input.</Alert> : ''}
                 <div className="completedArea">

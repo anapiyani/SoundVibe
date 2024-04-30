@@ -1,3 +1,4 @@
+@import '../../scss/mixin.scss';
 .track {
     margin-top: 10px;
     cursor: pointer;
@@ -8,13 +9,41 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include media-sm {
+        height: auto;
+        display: block;
+    }
     .names {
         display: flex;
+        @include media-md {
+            font-size: 12px;
+        }
+        @include media-sm {
+            font-size: 10px;
+        }
         .picture {
+            @include media-md {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            @include media-sm {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
             img {
                 width: 50px;
                 height: 50px;
                 border-radius: 5px;
+                @include media-md {
+                    width: 30px;
+                    height: 30px;
+                }
+                @include media-sm {
+                    width: 20px;
+                    height: 20px;
+                }
             }
         }
         .names_track {
@@ -24,19 +53,78 @@
             flex-direction: column;
             margin: 0;
             margin-left: 20px;
+            @include media-md {
+                font-size: 13px;
+            }
+            @include media-sm {
+                font-size: 8px;
+            }
             p {
                 margin: 0;
+                @include media-md {
+                    font-size: 13px;
+                }
+                @include media-sm {
+                    font-size: 8px;
+                }
             }
             .name_auth {
                 font-size: 15px;
+                @include media-md {
+                    font-size: 10px;
+                }
+                @include media-sm {
+                    font-size: 8px;
+                }
                 color: rgb(187, 185, 185);
             }
         }
     }
     .playButton {
+        @include media-sm {
+            display: flex;
+            padding: 0;
+            margin: 0;
+            justify-content: center;
+            align-items: center;
+        }
         Button {
             width: 40px;
             margin-right: 10px;
+            @include media-md {
+                width: 10px;
+                margin: 0;
+                padding: 0;
+            }
+            @include media-sm {
+                width: 10px;
+            }
+            
         }
+        Button {
+            @include media-sm {
+                max-width: 50px;
+                margin: 0;
+            }
+            .infoIcon {
+                @include media-sm {
+                    width: 15px;
+                    margin: 0;
+                }
+            }
+            .favIcon {
+                @include media-sm {
+                    width: 15px;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+.npreview {
+    font-size: 12px;
+    color: red;
+    @include media-sm {
+        font-size: 8px;
     }
 }

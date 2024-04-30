@@ -19,6 +19,9 @@
         justify-content: center;
         align-items: center;
         width: 100%;
+        @include media-sm {
+            width: 100%;
+        }
         button {
             border: none;
             background-color: transparent;
@@ -32,11 +35,17 @@
             @include media-md {
                 margin-right: 50px;
             }
+            @include media-sm {
+                margin-right: 0;
+            }
         }
         .prev {
             margin-left: 200px;
             @include media-md {
                 margin-left: 50px;
+            }
+            @include media-sm {
+                margin-left: 0;
             }
         }
         .repeat {

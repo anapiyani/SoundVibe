@@ -22,7 +22,7 @@ const MenuBar = () => {
             <div className="container">
                 <div className="content">
                     <div className="visible">
-                        <Button onClick={HandlerIcons}>
+                        <Button className="visibleBtn" onClick={HandlerIcons}>
                             {visible ? <VisibilityOffIcon/> : <VisibilityIcon/>}
                         </Button>
                     </div>

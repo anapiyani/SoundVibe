@@ -69,10 +69,10 @@ const EachSearchSong = (props: TProps) => {
             </div>
             <div className="playButton">
                 <Button onClick={handleOpen} className="playBtnIns">
-                    <InfoIcon/>
+                    <InfoIcon className="infoIcon" />
                 </Button>
                 {
-                     saved ? <Button><FavoriteIcon color="secondary"/></Button> : <Button onClick={() => sendLikedSong(props.name, props.authorName, props.picture, props.preview)}><FavoriteBorderIcon/></Button>
+                     saved ? <Button className="buttonSave"><FavoriteIcon className="favIcon" color="secondary"/></Button> : <Button onClick={() => sendLikedSong(props.name, props.authorName, props.picture, props.preview)}><FavoriteBorderIcon className="favIcon" /></Button>
                 }
             </div>
         </div> 
