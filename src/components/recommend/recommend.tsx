@@ -1,10 +1,5 @@
-import {useState } from "react";
 import './recommend.scss';
-import { Input } from '@mui/material';
-import SearchIcon from '@mui/icons-material/Search';
-import Button from '@mui/material/Button';
 import CircularProgress from '@mui/material/CircularProgress';
-import Alert from '@mui/material/Alert';
 import EachSearchSong from "../eachSearchSong/eachSearchSong";
 import { TSongs} from "../types/types";
 
@@ -17,7 +12,6 @@ type TProps = {
 }
 
 const Recommend = (props: TProps) => {
-    const [name, setName] = useState<string>('');
     return (
         <div className="search">
             <div className="searchContent">
