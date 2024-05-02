@@ -117,7 +117,7 @@ function App() {
       <Router>
         <MenuBar nowPlaying={currentInfo} />
           <Routes>
-            <Route path="/" element={<HomeContainer />} />
+            <Route path="/" element={<HomeContainer deleteLikedSong={deleteLiked} SongLiked={SongLiked} />} />
             <Route path="/search" element={<SearchContainer deleteLikedSong={deleteLiked} SongLiked={SongLiked} />} />
             <Route path="/likedSongs" element={<LikedContainer nextSong={handlePause} onPause={handlePause} deleteLiked={deleteLiked} liked={liked} playMusic={playMusic} isPlaying={isPlaying} />} />
             <Route path="*" element={<ErrorPage />} />

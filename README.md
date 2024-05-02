@@ -8,11 +8,11 @@ Just a simple web music player created using React + Spotify API. You can search
 4. Like Songs: Save your favorite songs by liking them, making them easily accessible for future listening.
 
 # Update (0.0.2):
-1. Now, when you save songs, they will be stored in localStorage, so you won't need to search for them again after refreshing the page.
-2. Added adaptation for display on mobile phones, etc.
-3. Now you can see the currently playing song on the menu bar.
-4. You can delete liked songs on the search page, (but there's a bug where the icon doesn't change).
-5. Fixed bugs (Show preview, added unlike button)
+1. Songs you save are now stored in localStorage. This means you won't have to search for them again after refreshing the page.
+2. Adapted the display for mobile phones and other devices.
+3. Added the feature to display the currently playing song on the menu bar.
+4. Integrated recommended songs display on the home page.
+5. Addressed various bugs, including showing song previews and adding an unlike button.
 
 
 # Installation:

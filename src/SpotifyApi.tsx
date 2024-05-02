@@ -22,7 +22,6 @@ const getAccessToken = async (): Promise<string> => {
     return authData.access_token;
   };
   
-
   export const searchSongs = async (query: string): Promise<any> => {
     try {
       const accessToken = await getAccessToken();
@@ -46,3 +45,26 @@ const getAccessToken = async (): Promise<string> => {
     }
   };
   
+
+  export const recommendSongs = async (): Promise<any> => {
+    try {
+      const accessToken = await getAccessToken();
+
+      const recommendResponse = await fetch('https://api.spotify.com/v1/recommendations?limit=10&market=ES&seed_artists=4NHQUGzhtTLFvgF5SZesLK&seed_genres=classical,country&seed_tracks=0c6xIDDpzE81m2q797ordA', {
+        method: "GET",
+        headers: {
+          'Authorization': `Bearer ${accessToken}`
+        }
+      });
+
+      if (!recommendResponse.ok) {
+        throw new Error(`recommend request failed: ${recommendResponse.statusText}`);
+      } 
+
+      const recommendData = await recommendResponse.json();
+      return recommendData.tracks;
+      } catch (error) {
+        console.error('Error recommend songs:', error);
+        throw error;
+      }
+    }
