@@ -9,7 +9,6 @@ import LikedContainer from './containers/likedSongs/likedContainer';
 import DashContainer from './containers/DashContainer/dashContainer';
 import type { TLiked } from './components/types/types';
 
-
 function App() {
   const [liked, setLiked] = useState<TLiked[]>(() => {
     const savedLikes = localStorage.getItem('likedSongs');
@@ -22,7 +21,8 @@ function App() {
   const [progress, setProgress] = useState<number>(0);
   const [currentSongIndex, setCurrentSongIndex] = useState<number>(0); 
   const [currentInfo, setCurrentInfo] = useState<TLiked | undefined>();
-
+ 
+  
   useEffect(() => {
     if (audioRef.current) {
       audioRef.current.addEventListener('timeupdate', updateTime);
