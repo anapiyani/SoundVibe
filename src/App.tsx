@@ -68,7 +68,6 @@ function App() {
       const copyState = liked.slice(); 
       const infoCurrent: TLiked | undefined = copyState.find(item => item.preview === previewUrl); 
       infoCurrent ? setCurrentInfo(infoCurrent) : ''
-      // console.log(currentInfo);
     }
   }
 
